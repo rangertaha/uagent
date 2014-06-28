@@ -1,0 +1,17 @@
+*.pyc
+*.mo
+*.db
+*.swp
+gitkey
+local_settings.py
+/static/
+.coverage
+/htmlcov/
+/reports/
+venv/
+env/
+.idea/
+.zedstate
+.idea/
+uploads
+*.log
