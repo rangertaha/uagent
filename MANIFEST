@@ -2,3 +2,6 @@
 setup.cfg
 setup.py
 uagent/__init__.py
+uagent/tests.py
+uagent/uagent.py
+uagent/uastrings.py

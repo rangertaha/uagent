@@ -4,14 +4,11 @@
 *.swp
 gitkey
 local_settings.py
-/static/
 .coverage
-/htmlcov/
-/reports/
+/build
 venv/
 env/
+build/
+uagent-0.0.1/
 .idea/
-.zedstate
-.idea/
-uploads
 *.log
