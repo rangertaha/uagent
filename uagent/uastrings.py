@@ -10492,7 +10492,7 @@ BROWSERS = [
     'Mozilla/5.0 (Windows; U; Windows NT 6.0; en-US; rv:1.8.1.6) Gecko/20070801 Firefox/2.0 Wyzo/0.5.3',
     'Mozilla/5.0 (Windows; U; Windows NT 5.1; en-US; rv:1.8.1.6) Gecko/20070801 Firefox/2.0 Wyzo/0.5.3', ]
 
-UA = {'libraries': LIBRARIES, 'crawlers': CRAWLERS, 'other': OTHER,
-      'email_client': EMAIL_CLIENTS, 'link_checkers': LINK_CHECKERS,
+UA = {'libraries': LIBRARIES, 'crawlers': CRAWLERS, 'others': OTHER,
+      'email_clients': EMAIL_CLIENTS, 'link_checkers': LINK_CHECKERS,
       'mobile': MOBILE, 'validators': VALIDATORS, 'offline': OFFLINE,
-      'feed_reader': FEED_READERS, 'browsers': BROWSERS}
+      'feed_readers': FEED_READERS, 'browsers': BROWSERS}

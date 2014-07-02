@@ -12,7 +12,7 @@ class UserAgent:
         self.UAs = uastrings.UA
         self._methods()
 
-    def all(self, cat=None):
+    def all(self):
         if self.cat == 'all':
             a = []
             for k, v in self.UAs.items():
@@ -39,19 +39,3 @@ class UserAgent:
     def _methods(self):
         for k, v in self.UAs.items():
             setattr(self, k, v)
-
-
-if __name__ == '__main__':
-    u = UserAgent('browsers')
-    # Counting the number of user agents in each category
-    print '{0:15} {1:10}'.format('all', u.count())
-    for group in u.UAs:
-        print '{0:15} {1:10}'.format(group, len(u.UAs[group]))
-
-    print '\nRandom User Agent:\n{0}\n'.format(u.random())
-
-    print u.search('Mozilla')
-
-    print '\nAll: ', len(u.all())
-
-    print u.browsers
