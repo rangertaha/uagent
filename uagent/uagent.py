@@ -1,4 +1,8 @@
+"""
+
+"""
 import random
+
 import uastrings
 
 
@@ -6,40 +10,48 @@ class UserAgent:
     def __init__(self, category='all'):
         self.cat = category
         self.UAs = uastrings.UA
+        self._methods()
 
-    def __repr__(self):
-        return self.random(self.cat)
+    def all(self, cat=None):
+        if self.cat == 'all':
+            a = []
+            for k, v in self.UAs.items():
+                a.extend(v)
+            return a
+        else:
+            return self.UAs[self.cat]
 
-    def all(self):
-        a = []
+    def count(self):
+        return len(self.all())
+
+    def random(self):
+        return random.choice(self.all())
+
+    def search(self, query, rand=True):
+        results = []
+        for ua in self.all():
+            if query in ua:
+                results.append(ua)
+        if rand:
+            return random.choice(results)
+        return results
+
+    def _methods(self):
         for k, v in self.UAs.items():
-            a.extend(v)
-        return a
-
-    def count(self, category='all'):
-        if category == 'all':
-            return len(self.all())
-        if category in self.UAs.keys():
-            return len(self.UAs[category])
-        else:
-            raise ValueError(
-                "Options are: {0}".format(['all'] + self.UAs.keys()))
-
-    def random(self, category='all'):
-        if category == 'all':
-            return random.choice(self.all())
-        if category in self.UAs.keys():
-            return self.UAs[category]
-        else:
-            raise ValueError(
-                "Categories are: {0}".format(['all'] + self.UAs.keys()))
+            setattr(self, k, v)
 
 
 if __name__ == '__main__':
-    u = UserAgent()
+    u = UserAgent('browsers')
     # Counting the number of user agents in each category
-    print '{0:15} {1:10}'.format('all', u.count('all'))
-    for k, v in u.UAs.items():
-        print '{0:15} {1:10}'.format(k, u.count(k))
-    print '\nRandom User Agent:\n{0}\n'.format(u.random('all'))
-    print 'UserAgent', UserAgent()
+    print '{0:15} {1:10}'.format('all', u.count())
+    for group in u.UAs:
+        print '{0:15} {1:10}'.format(group, len(u.UAs[group]))
+
+    print '\nRandom User Agent:\n{0}\n'.format(u.random())
+
+    print u.search('Mozilla')
+
+    print '\nAll: ', len(u.all())
+
+    print u.browsers
