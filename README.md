@@ -1,44 +1,43 @@
-
-
 Random User Agent Strings
 ===========
 
-This module allows you to a random user string from the specified category.
+This module allows you to select a random user agent from a list of categories. All categories total to 10886 user agent strings.
 
-Categories of User Agents
+Categories of User Agent Strings
 -----------------------
 
-    * Browsers
-    * Mobile
-    * Libraries
-    * Crawlers
-    * Validators
-    * Email Clients
-    * Link Checkers
-    * Offline
-    * Others
 
 
+* 9420   Browsers
+* 508    Mobile
+* 141 Libraries
+* 442 Crawlers
+* 17 Validators
+* 217 Email Clients
+* 13 Feed Readers
+* 34 Link Checkers
+* 34 Offline
+* 60 Others
 
-
-UA = {'libraries': LIBRARIES, 'crawlers': CRAWLERS, 'others': OTHER,
-      'email_clients': EMAIL_CLIENTS, 'link_checkers': LINK_CHECKERS,
-      'mobile': MOBILE, 'validators': VALIDATORS, 'offline': OFFLINE,
-      'feed_readers': FEED_READERS, 'browsers': BROWSERS}
 
 Example
 -------
 
+The following example selects a random user agent from all the categories.
 
     from uagent import UserAgent
 
-    # Returns random user agent
-    UserAgnet()
+    uas = UserAgnet()
 
-    # Returns random user agent used by web browsers
-    UserAgent('browsers')
-
-    # Returns random user agent used by web crawlers
-    UserAgent('crawlers')
+    # Returns random user agent, selected from all the categories
+    ua = uas.random()
 
 
+Browsers
+________
+
+	# Initialize and select the 'browsers' category
+	uas = UserAgent('browsers')
+
+    # Returns random user agent from this category
+    ua = uas.random()

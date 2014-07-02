@@ -39,3 +39,7 @@ class UserAgent:
     def _methods(self):
         for k, v in self.UAs.items():
             setattr(self, k, v)
+
+if __name__ == '__main__':
+    ua = UserAgent('validators')
+    print ua.count()
