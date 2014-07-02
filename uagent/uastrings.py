@@ -10495,4 +10495,4 @@ BROWSERS = [
 UA = {'libraries': LIBRARIES, 'crawlers': CRAWLERS, 'others': OTHER,
       'email_clients': EMAIL_CLIENTS, 'link_checkers': LINK_CHECKERS,
       'mobile': MOBILE, 'validators': VALIDATORS, 'offline': OFFLINE,
-      'feed_readers': FEED_READERS, 'browsers': BROWSERS, 'consoles': CONSOLE}
+      'feed_readers': FEED_READERS, 'browsers': BROWSERS}
