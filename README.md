@@ -27,7 +27,7 @@ The following example selects a random user agent from all the categories.
 
     from uagent import UserAgent
 
-    uas = UserAgnet()
+    uas = UserAgent()
 
     # Returns random user agent, selected from all the categories
     ua = uas.random()
