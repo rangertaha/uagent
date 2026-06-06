@@ -7,8 +7,14 @@ local_settings.py
 .coverage
 /build
 venv/
+.venv/
 env/
 build/
+dist/
+*.egg-info/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
 uagent-0.0.1/
 .idea/
 *.log

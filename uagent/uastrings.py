@@ -1172,7 +1172,7 @@ CRAWLERS = [
     'Seekbot/1.0 (http://www.seekbot.net/bot.html) HTTPFetcher/2.1',
     'Seekbot/1.0 (http://www.seekbot.net/bot.html) HTTPFetcher/0.3',
     'Seekbot/1.0 (http://www.seekbot.net/bot.html)', 'semanticdiscovery/0.1',
-    'Sensis Web Crawler (search_comments\at\sensis\dot\com\dot\au)',
+    r'Sensis Web Crawler (search_comments\at\sensis\dot\com\dot\au)',
     'Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.0) SEOChat::Bot v1.1',
     'SeznamBot/2.0 (+http://fulltext.seznam.cz/)',
     'SeznamBot/2.0 (+http://fulltext.sblog.cz/robot/)',

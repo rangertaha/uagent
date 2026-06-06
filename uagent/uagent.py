@@ -1,9 +1,7 @@
-"""
-
-"""
+"""Random user agent string selection across categories."""
 import random
 
-import uastrings
+from uagent import uastrings
 
 
 class UserAgent:
@@ -40,6 +38,7 @@ class UserAgent:
         for k, v in self.UAs.items():
             setattr(self, k, v)
 
+
 if __name__ == '__main__':
     ua = UserAgent('validators')
-    print ua.count()
+    print(ua.count())

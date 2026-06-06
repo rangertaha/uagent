@@ -1,43 +1,64 @@
-Random User Agent Strings
-===========
+# uagent — Random User Agent Strings
 
-This module allows you to select a random user agent from a list of categories. All categories total to 10886 user agent strings.
+`uagent` lets you select a random user agent string from a range of categories.
+All categories total **10,899** user agent strings.
 
-Categories of User Agent Strings
------------------------
+## Categories
 
+| Category        | Count |
+|-----------------|-------|
+| `browsers`      | 9420  |
+| `mobile`        | 508   |
+| `crawlers`      | 442   |
+| `email_clients` | 217   |
+| `libraries`     | 141   |
+| `others`        | 60    |
+| `link_checkers` | 34    |
+| `offline`       | 34    |
+| `validators`    | 17    |
+| `consoles`      | 13    |
+| `feed_readers`  | 13    |
 
+## Installation
 
-* 9420   Browsers
-* 508    Mobile
-* 141 Libraries
-* 442 Crawlers
-* 17 Validators
-* 217 Email Clients
-* 13 Feed Readers
-* 34 Link Checkers
-* 34 Offline
-* 60 Others
+```bash
+pip install uagent
+```
 
+## Usage
 
-Example
--------
+Select a random user agent from all categories:
 
-The following example selects a random user agent from all the categories.
+```python
+from uagent import UserAgent
 
-    from uagent import UserAgent
+uas = UserAgent()
 
-    uas = UserAgnet()
+# Returns a random user agent, selected from all categories
+ua = uas.random()
+```
 
-    # Returns random user agent, selected from all the categories
-    ua = uas.random()
+Restrict selection to a single category:
 
+```python
+# Initialize and select the 'browsers' category
+uas = UserAgent('browsers')
 
-Browsers
-________
+# Returns a random user agent from this category
+ua = uas.random()
+```
 
-	# Initialize and select the 'browsers' category
-	uas = UserAgent('browsers')
+Other methods:
 
-    # Returns random user agent from this category
-    ua = uas.random()
+```python
+uas = UserAgent()
+
+uas.count()                      # Number of user agents in the selected category
+uas.all()                        # List of all user agents in the selected category
+uas.search('Linux')              # A random user agent containing 'Linux'
+uas.search('Linux', rand=False)  # All user agents containing 'Linux'
+```
+
+## License
+
+[MIT](LICENSE.txt)
